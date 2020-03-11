@@ -1,0 +1,34 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephiesuzanne/Scraper.git"
+  },
+  "author": "Steph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephiesuzanne/Scraper/issues"
+  },
+  "homepage": "https://github.com/stephiesuzanne/Scraper#readme",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-router": "0.0.1",
+    "mongoose": "^5.9.4",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.3"
+  }
+}

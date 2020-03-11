@@ -1,0 +1,29 @@
+.nav-item {
+  margin-right: 10px;
+}
+
+.navbar-brand,
+.nav-link {
+  color: black !important;
+}
+
+.navbar {
+  background-color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+.jumbotron {
+  background-image: url(../images/newspapers.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.display-3 {
+  color: black;
+  font-family: "Oswald", sans-serif;
+  text-align: right;
+}
+
+.navbar-toggler-icon {
+  color: black !important;
+}
