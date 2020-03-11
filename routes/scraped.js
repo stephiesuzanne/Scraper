@@ -56,20 +56,19 @@ router.put("/articles/:id", function(request, response) {
   });
 });
 
-//  
 router.get("/scrape", function(req, res) {
-  request("https://thenewdaily.com.au/", function(error, response, html) {
+  request("http://www.theverge.com", function(error, response, html) {
     var $ = cheerio.load(html);
 
-    $("div.singular-post-information").each(function(i, element) {
+    $(".c-entry-box--compact__title").each(function(i, element) {
       var title = $(element)
-        .children("h4")
+        .children("a")
         .text();
       var summary = $(element)
         .children("p")
         .text();
       var link = $(element)
-        .parent()
+        .children("a")
         .attr("href");
 
       console.log({ title, summary, link });
