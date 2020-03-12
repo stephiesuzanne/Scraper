@@ -1,3 +1,5 @@
+//jshint esversion:6
+
 var express = require("express");
 var exphbs = require("express-handlebars");
 var nodemon = require("nodemon");
@@ -5,19 +7,13 @@ var bodyParser = require("body-parser");
 
 var scrapedRoute = require("./routes/scraped");
 
-const mongoose = require("mongoose");
-var MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-mongoose.Promise = Promise;
+const mongoose = require('mongoose');
+//mongodb+srv://steph:dbpw@cluster0-nr7pf.mongodb.net/Scraper?retryWrites=true&w=majority
+mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true,  useUnifiedTopology: true });
 
-mongoose.connect(
-  MONGODB_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  function(err) {
-    console.log(err);
-  }
-);
+
+
 
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
