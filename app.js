@@ -9,9 +9,10 @@ var scrapedRoute = require("./routes/scraped");
 
 
 const mongoose = require('mongoose');
-//mongodb+srv://steph:dbpw@cluster0-nr7pf.mongodb.net/Scraper?retryWrites=true&w=majority
-mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true,  useUnifiedTopology: true });
-
+// //mongodb+srv://steph:dbpw@cluster0-nr7pf.mongodb.net/Scraper?retryWrites=true&w=majority
+// mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true,  useUnifiedTopology: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(MONGODB_URI);
 
 
 
